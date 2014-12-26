@@ -5,7 +5,7 @@ require 'chargepoint/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "chargepoint"
-  spec.version       = Chargepoint::VERSION
+  spec.version       = ChargePoint::VERSION
   spec.authors       = ["Jim Meyer"]
   spec.email         = ["jim@geekdaily.org"]
   spec.summary       = %q{A gem to wrap the ChargePoint network JSON APIs}
