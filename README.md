@@ -1,6 +1,6 @@
 # Chargepoint
 
-A gem to wrap the ChargePoint network JSON APIs
+A (very incomplete) gem to wrap the ChargePoint network JSON APIs. This is only a stub for the tiny bit I needed for a project; I'll grow it more as I have time or as you submit pull requests.
 
 ## Installation
 
@@ -20,7 +20,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    #!/usr/bin/env ruby
+    require 'chargepoint'
+    
+    # Possible, but ill-advised
+    credentials = {:user_name => "me", :user_password => "seekrit"}
+    
+    # Better, as long as you put 'chargepoint.yml' in your .gitignore
+    credentials = YAML.load_file('chargepoint.yml')
+    
+    ChargePoint::API.authenticate(credentials)
+    json_response = ChargePoint::API.get_charge_spots(latitude, longitude, search_radius)
 
 ## Contributing
 
